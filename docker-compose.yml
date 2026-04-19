@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  github-analyzer:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    # Example command to run:
+    # command: ["--user", "torvalds", "--action", "mutual"]
